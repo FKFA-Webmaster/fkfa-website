@@ -3,27 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neuigkeiten – Freundeskreis für Flüchtlinge Ahrensburg e.V.</title>
+<title>Persisch – Freundeskreis für Flüchtlinge Ahrensburg e.V.</title>
 <link rel="stylesheet" href="style.css">
-<style>
-.news-article { background:white; border-radius:16px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.05); border:1px solid rgba(0,0,0,.04); margin-bottom:32px; scroll-margin-top:90px; }
-.news-article-header { padding:28px 32px 0; }
-.news-article-header .news-date { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; font-weight:600; margin-bottom:8px; }
-.news-article-header h2 { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--text); margin-bottom:12px; }
-.news-article-img { height:200px; display:flex; align-items:center; justify-content:center; font-size:64px; margin:20px 32px; border-radius:12px; }
-.news-article-body { padding:0 32px 28px; }
-.news-article-body p { color:var(--muted); line-height:1.75; margin-bottom:14px; font-size:15px; }
-.news-article-body p:last-child { margin-bottom:0; }
-.news-divider { border:none; border-top:2px solid var(--green-pale); margin:0; }
-.back-link { display:inline-flex; align-items:center; gap:6px; color:var(--green); text-decoration:none; font-weight:600; font-size:14px; margin-bottom:28px; }
-.back-link:hover { text-decoration:underline; }
-.news-tag { display:inline-block; background:var(--green-pale); color:var(--green); padding:3px 10px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; margin-bottom:10px; }
-@media (max-width:600px) {
-  .news-article-header { padding:20px 20px 0; }
-  .news-article-img { margin:16px 20px; height:160px; font-size:48px; }
-  .news-article-body { padding:0 20px 20px; }
-}
-</style>
 </head>
 <body>
 <nav>
@@ -31,7 +12,7 @@
   <ul class="nav-links">
     <li><a href="index.html">Start</a></li>
     <li>
-      <a href="migranten.html">Seiten für Migranten ▾</a>
+      <a href="migranten.html" class="active">Seiten für Migranten ▾</a>
       <div class="dropdown">
         <a href="persisch.html">🇮🇷 Persisch (فارسی)</a>
         <a href="arabisch.html">🇸🇾 Arabisch (العربية)</a>
@@ -47,89 +28,66 @@
   </button>
 </nav>
 
-<div class="hero hero-sm">
-  <div class="hero-inner">
-    <h1>Unsere <span>Neuigkeiten</span></h1>
-    <p>Aktuelles aus dem Freundeskreis – was wir erleben, planen und feiern.</p>
+<div class="lang-hero">
+  <div class="lang-hero-inner">
+    <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCADwAWgDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAUGBAcCAwgBCf/EAEEQAAAGAgAEAwYEAwUGBwAAAAABAgMEBQYRBxITIRQxQRUWIjJRYQgXcYFCkaEjM1JikiVWV5ax0jRHg4Wyw9H/xAAbAQEAAgMBAQAAAAAAAAAAAAAAAQIDBAUGB//EADoRAAIBAgMFBgMFCAMBAAAAAAABAgMRBCExBRJBUWETMkJxodEiYpEGFCNS8BVDgYKx0uHxB1PBcv/aAAwDAQACEQMRAD8AggAB5Q+RAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbMY4cxGkVbVmVlFlyamZNkMqNKTQ41vkIiNOyIy1vez+hkMeLhlQU+naXByOzROom7B1uu6anUOqXyn8ydE3ov12ZdxfKOJlEaqr2bXALWfNhwn4ZyPabSedDpmaux776Mi3v0EXMcyMshdp6vD50OSWLHAYYOe2pxtvq9nubtst9teY6LowSTt6P2PTSwdGMU9x8PC76LpbmQdjiOKV0JybPxniJGjNFtx1wo6UpLeu58n1MfLDEsTr4vip2NcQ47HMlPUcKOSdqMiIt8vqZkQsFPRZVFYsoE/CrqdX2ERllxpy2QaiWg+ZSyUZnojMvL0HXkjdtTYjKipwy5hsSJcVSnplsmQRKQ6RpSRemzPX8gdNJXt6f4Dw0FFycLZPwvXP5dHlyIZ3h7BlTK+NXYznEbqzWkSXpyGum2watLUXKnsoi77Pt5jrh8PaV6wiR1SrAkPZJJqlGTiNky2RmlRfD8/bufl9hbbyBlcy/j3kLCr6LLRPalPJO5QppaEqI1IJGyIt6ISbKLhqS0+jhlaktqyds0/wC1mtddz5j/AE+wsqML6ej9jMsDRcneD1/LLTLlE1xj2HU8uAt2Rj2azlpfdbJ6uSybKiSs0lrmTvfbv9xkOYnibdg1XuYzxETLeQpbbJpj8y0l5mRcnkQz6eNlF5R1DUbGbV2thy5ypBxbFDJvKcWekke+3IovPvvuJZikyKRS1MW6wW8lTa5lbSZTFw20pRKUaj35n9C8/QUjTTWUfTy6GCnhoSit2HBZ7rz0v4Xzdn0K17pYp7S9m+7PETxvR6/Q1H5+nzcvNrk8t9tjHtMBjMU+QW5VeR1sWBGZXEKxJCVOOKWSVkrSdGWj7a0Yt/jL3319n+5Vnz+7XgvC+1Edfo9b+96v69vrvuOEGkyRhdvDfwW8k1FjHba8O7cIUtBpVzGZLP6nr09BPZRfDnwfsWeEpSulC+q7ryyyv8PP/RVcmwOnq38pSw9ZOlTv16I6edBqcJ9JGvfwls+/w6199jP9xKD/AHQ4k/6GP+wTufSbhFZaTnsEn1zllKhKkSHJ7biTUypKW0kkvLflv6mOmZV55Iyhd97qXLb3tRqWhtNojpkykyNTRp3rZ68/6CXTgpO0fR830JnhaMajUYN/yvRuXNcrIgIOJYpOS6qHjPESQTLqmXTbKOfI4k9KSfw9jL6D5BxLFbCJ4mvxniHJaM1JJbZRzTzJMyMtkj0MtC6wa+1hZCu8jcOb9ElcpcpSCvG+kbijMzM0eWu4hscbt7nEI0X3OupTMeXKUh+HbJjkalumaiMvXlMtfsYdlHS3o/YfdKaai455+F8LfL15MgGOHMRpFW1ZlZRZcmpmTZDKjSk0ONb5CIjTsiMtb3s/oZDHi4ZUFPp2lwcjs0TqJuwdbrump1Dql8p/MnRN6L9dmXcXyjiZRGqq9m1wC1nzYcJ+Gcj2m0nnQ6Zmrse++jIt79BFzHMjLIXaerw+dDklixwGGDntqcbb6vZ7m7bLfbXmIdGCSdvR+xWWDoxinuPh4XfRdLcyDscRxSuhOTZ+M8RI0ZotuOuFHSlJb13Pk+pj5YYlidfF8VOxriHHY5kp6jhRyTtRkRFvl9TMiFgp6LKorFlAn4VdTq+wiMsuNOWyDUS0HzKWSjM9EZl5eg68kbtqbEZUVOGXMNiRLiqU9MtkyCJSHSNKSL02Z6/kDppK9vT/AAHhoKLk4Wyfheufy6PLkQzvD2DKmV8auxnOI3VmtIkvTkNdNtg1aWouVPZRF32fbzHXD4e0r1hEjqlWBIeySTVKMnEbJlsjNKi+H5+3c/L7C23kDK5l/HvIWFX0WWie1KeSdyhTS0JURqQSNkRb0Qk2UXDUlp9HDK1JbVk7Zp/2s1rrufMf6fYWVGF9PR+xmWBouTvB6/llplyia4x7DqeXAW7Ix7NZy0vutk9XJZNlRJWaS1zJ3vt3+4yHMTxNuwar3MZ4iJlvIUttk0x+ZaS8zIuTyIZ9PGyi8o6hqNjNq7Ww5c5Ug4tihk3lOLPSSPfbkUXn333EsxSZFIpamLdYLeSptcytpMpi4baUolKNR78z+hefoKRpprKPp5dDBTw0JRW7Dgs9156X8L5uz6Fa90sU9pezfdniJ43o9foaj8/T5uXm1yeW+2xj2mAxmKfILcqvI62LAjMriFYkhKnHFLJKyVpOjLR9taMW/wAZe++vs/3Ks+f3a8F4X2ojr9Hrf3vV/Xt9d9xwg0mSMLt4b+C3kmosY7bXh3bhCloNKuYzJZ/U9enoJ7KL4c+D9izwlKV0oX1XdeWWV/h5/wCiq5NgdPVv5Slh6ydKnfr0R086DU4T6SNe/hLZ9/h1r77Gf7iUH+6HEn/Qx/2Cdz6TcIrLSc9gk+ucspUJUiQ5PbcSamVJS2kkl5b8t/Ux0zKvPJGULvvdS5be9qNS0NptEdMmUmRqaNO9bPXn/QS6cFJ2j6Pm+hM8LRjUajBv+V6Ny5rlZEBBxLFJyXVQ8Z4iSCZdUy6bZRz5HEnpST+HsZfQfIOJYrYRPE1+M8Q5LRmpJLbKOaeZJmRlskehloXWDX2sLIV3kbhzfokrlLlKQV430jcUZmZmjy13ENjjdvc4hGi+511KZjy5SkPw7ZMcjUt0zURl68plr9jDso6W9H7D7pTTUXHPPwvhb5evJkAxw5iNIq2rMrKLLk1MybIZUaUmhxrfIREadkRlre9n9DIY8XDKgp9O0uDkdmidRN2Drdd01OodUvlP5k6JvRfrsy7i+UcTKI1VXs2uAWs+bDhPwzke02k86HTM1dj330ZFvfoIuY5kZZC7T1eHzocksWOAwwc9tTjbfV7Pc3bZb7a8xDowSTt6P2KywdGMU9x8PC76LpbmQdjiOKV0JybPxniJGjNFtx1wo6UpLeu58n1MfLDEsTr4vip2NcQ47HMlPUcKOSdqMiIt8vqZkQsFPRZVFYsoE/CrqdX2ERllxpy2QaiWg+ZSyUZnojMvL0HXkjdtTYjKipwy5hsSJcVSnplsmQRKQ6RpSRemzPX8gdNJXt6f4Dw0FFycLZPwvXP5dHlyIZ3h7BlTK+NXYznEbqzWkSXpyGum2watLUXKnsoi77Pt5jrh8PaV6wiR1SrAkPZJJqlGTiNky2RmlRfD8/bufl9hbbyBlcy/j3kLCr6LLRPalPJO5QppaEqI1IJGyIt6ISbKLhqS0+jhlaktqyds0/7Wa113PmP9PsLKjC+no/YzLA0XJ3g9fyy0y5RNcY9h1PLgLdkY9ms5aX3WyerksmyokrNJa5k7327/AHGQ5ieJt2DVe5jPERMt5CltsmmPzLSXmZFyeRDPp42UXlHUNRsZtXa2HLnKkHFsUMm8pxZ6SR77cii8+++4lmKTIpFLUxbrBbyVNrmVtJlMXDbSlEpRqPfmf0Lz9BSNNNZR9PLoYKeGhKK3YcFnuvPS/hfN2fQrXulintL2b7s8RPG9Hr9DUfn6fNy82uTy322Me0wGMxT5BblV5HWxYEZlcQrEkJU44pZJWStJ0ZaPtrRi3+MvffX2f7lWfP7teC8L7UR1+j1v73q/r2+u+44QaTJGF28N/BbyTUWMdtrw7twhS0GlXMZks/qevT0E9lF8OfB+xZ4SlK6UL6ruvLLK/wAPP/RVcmwOnq38pSw9ZOlTv16I6edBqcJ9JGvfwls+/wAOtffYz/cSg/3Q4k/6GP8AsE7n0m4RWWk57BJ9c5ZSoSpEhye24k1MqSltJJLy35b+pjpmVeeSMoXfe6ly297UalobTaI6ZMpMjU0ad62evP8AoJdOCk7R9HzfQmeFoxqNRg3/ACvRuXNcrIgIOJYpOS6qHjPESQTLqmXTbKOfI4k9KSfw9jL6D5BxLFbCJ4mvxniHJaM1JJbZRzTzJMyMtkj0MtC6wa+1hZCu8jcOb9ElcpcpSCvG+kbijMzM0eWu4hscbt7nEI0X3OupTMeXKUh+HbJjkalumaiMvXlMtfsYdlHS3o/YfdKaai455+F8LfL15MgGOHMRpFW1ZlZRZcmpmTZDKjSk0ONb5CIjTsiMtb3s/oZDHi4ZUFPp2lwcjs0TqJuwdbrump1Dql8p/MnRN6L9dmXcXyjiZRGqq9m1wC1nzYcJ+Gcj2m0nnQ6Zmrse++jIt79BFzHMjLIXaerw+dDklixwGGDntqcbb6vZ7m7bLfbXmIdGCSdvR+xWWDoxinuPh4XfRdLcyDscRxSuhOTZ+M8RI0ZotuOuFHSlJb13Pk+pgJ+nosqisWUCfhV1Or7CIyy405bINRLQfMpZKMz0RmXl6AIdJvur6p+xSeEnKzpwS84y/wDIm+QAB2z3QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABSeKmYWWEIrrtNPIs6MlON2ZRk7dY3ym26X+UtLI96L4i7kKTmoR3paGxhcNUxVVUafeenC/Tzei6l2AaV/Pprq+2/c3IPc7k6XtHw6ep1973y8+uly/xb3vt9hdOFeYWObt2N0qmk1dIam26zxJadkERKNbpl6Ee0kWjMvhPuMUMVSqS3YvM38VsLG4Sk61aForqteWuvNapal2AAGwcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKlxQ4gUPD6j9o3Dpred2mLEbMurIUReRfRJdtqPsWy9TIjsltPi1dXKs5zpMxYjK3nln5JQkjMz/kQ8ZY57R44cdWXrZKzgqWbzzJKPljw2z2TZGXlvZJ2X8SzP1GljMS6VoQ70tD0/2c2JTx7qYjEu1Gkry5vovP9ao3Bj+aZlaU8TN8qe9n186QmNj+PQT6S7F9Zmls3XD2vk9e2iMi5ta0St4QUSG4bSJbqXpBJLqrSnlSavXRehb8i79vUxouFORln4q2aprkKpw6A54ZhBabJzlQhZ69DJTiU/8AppG+hOEbald3s7efNmP7QxhTlSUYKDlHesvCn3Y9XbNt5tvPRHh38y83/N72x7fkeJ8Z4Pl0np9Dq/3fJrl5f23vvvfce3JyJDkN1ER1LMg0n0lqTzJJXpsvUt+Zdu3qQ/PT/wAwv/dv/tH6IjS2TOU+03nfM9N/yDh6OHeEdKCj8L0S4btvoaKyDNswrKWVm+JuHYVsGQqNfY/Yl1HK55BkThtuFpfL69zMiIyPWtknZHC/iBQ8QaP2jTumh5rSZURwy6sdRl5H9Un30oux6P1IyLWcuejE/wAVMipeNB1OYwGvEMKQRoN3lUhBmXqZqbUX36h7Go8i9ocD+OzrtUlaYCVk800ajMn4bh7Ns9+etGnZ/wASCP0EvFToS3nnG9n06rz5FY7Cw+1KXYU0o1XBVKb/ADJ6wlzcXkpatWb439qgMapnxbSri2cF0nostlDzKy8lIURGR/yMZI7Cd80fOZRcW4tZoAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGsPxRzlweCl0Ta+RclTLBH9SU6nmL90kZDW34IKpG8lu1kk1l0YrZ+pF8Sl/z+D+Q2h+JiqetuC963HSanYyG5RF/lbWlSz/ZBKP9hrz8EElpVFksMj/tm5LDqi/yqSoi/qkxyqqvtCF+Xue/wE937IYlQ131fy+D9fUhfwwz/G/iAy+U4ZEuXHlvaMu5mcptR/8AUepR4yxSb+Xn4oX25i+jEK1fiumrsXReM+mo/oRczav2Hs0X2ZK9OUXqmzV+3NDdxlKvHuTpxa/hl/S31Pzw5FfmP09fH7X5dffrD9Dx4E8MX55eD7a95el5dv8AxOvIe+xg2Qrdp5nW/wCRZ733T/5b+u6eW/xN2BRPxCYhIbPa4bEN09F3IylOK1/Qv5jL/G/Vp5sau0JSSjJ6K4fqZfCpH/Vf8xSspmnxF/FAw3EM3ovtVmK0ae5dBgy51F9SMkrX+42F+N+U0mkxmEZ/2rkl90i/ypSkj/8AmQwVJKpSry4XR1MLSlhNobKoeNQlddGm/TP6F+/C5PXO4KUpOL51xlPMGf0JLquUv9JkNnDW/wCGiqdqeC9E2+k0uSUOSjI/8Li1KQf7oNJ/uNkDs4W/YQvyR82284PaeIcNN+X9WAABnOSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHXKYZlRnY0htLrLqDQ4hRbJSTLRkf2Mh5u4dUsrg7x99gS3DOgyRtbUCQr5TUSuZtKj/wAaT+DXr1CP1IelRF5Pj9RktWutuoTcqOoyUneyU2ovJaFF3SovQyMjGvXodo4zXejp7fxOzsrav3SNWhUV6VVWkuK5SXWLz66dTzx+MjBHzkxs9r2TW1yJi2RJL5DI9NuH9j3yGf2R9RsP8NvEpnNsUbq7GSk8grWyRISo9KfbLsl4vr6Er/N37cxDZZ1rL9KdVZmVkytk2H/EII+uky0fOWtGZl59iL7F5DytxT4RZDwztizXBLB06+K51kn1CJ+H9j32cR6epmWyURlsz0q1OeGquvTV4vVf+nptm4rC7b2fHZOLmo1IP8Ob0fyv+n04rOokwRfii6H8Pvn/AE8Z/wDg9FfiS4lsYVirtTXSiLIbJo0R0oP4o7Z9lPH9O2yT/m79+Ux5KLL7T3+99eWOdp4zxuuQ+n1d73y78t99bG2eFXCLIOJVuWa53PdOulOE8rbpG/N+3w/3aNdvQyLskiLRlzsLWm1OnRWcn9Eew27szCwqYfGbSmlToxStq5S5JcVl/Hyuyc/BvgrxSJOeWDBpa5FRa3mL5jM9OOF9i1yEf3V9B2cRKWTxj4++woazKhxttDNhJT5EfNzOJSf+Mz+Ai9OQz9D36JKtZYpSqqwyrWUMkwx4dBF0EkWi5C1ojIvLsZfY/IdGMY/UY1VoraWE3FjpM1K1s1OKPzWtR91KP1MzMx1o4FKlGjw1fU8BV+1U546ttFL8RrdguEFz87adW2+TkIrDMWM1GjtpaZaQSG0JLRJSRaIi+xEOwAHQPINtu7AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGFcVcS2inGmKlE2fn0JbrB/6m1JP+o1/Y8DOH1lPOZYxbSYr/C/aPuEX7mrm/r6DZoDHOjTqd+KZu4XaWLwmVCrKPk2jQBfhzpy4qnO6aPc445ueC6yup1tcvS5t83L/AB829+n3FzruBnD+tnFLrotrDUR75WLR9sj/AHJXN/UbMAYYYKhC9oo6GI+021a6SlXlZJLJtXtxfN83qYVPVxKmKUaGqUbZeXXluvn/AKnFKP8AqM0AGykkrI4k5ym3KTu2AABJUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8wV1txSfi0zsriBYxHbClnWbjK65klNKjmekdyL5tF30WvuIgrPJImZ0d5a57eJm2uJtSSlQqhEhxtC3jPochduUjI1c+t70Q4UXFrD5FVUP5c5lsy8iVcuukPstsuIdS+Z7VzLcJRmSdEW9eQw3uK+OV1it3G05AwiPhh0EF95tpD6JBO8yHFcq9EnWu5d9+g846sLJ7/AKvp18z7RTwOKU5QWGS7yyhBLWVrPdeVt3VZ20LTKzWwisKfk8Vs0YZR8zjmKISlPp3M+wwMmvG7ap8LfcTMydgm625p3FkoSa0qI0HsjL+Ii19RXq3ifSyqq7oMru82tam0gx2yUs2XXmX0qJThpJSySSTMiIj7mZeehk3vFHGXcMm0sa3zm5fky4jyFXJMKQyll0lqJHKvZGZfbzIvIHXjKL+Lhzf9xMNl1qVWNqOaks1GGjtmn2WTV3e9tMiyvZRmMqxqYFHxEy6S/NsWIzpycaQwhlpauVTnMZGXw7I9DvhWHEuRaRIf5lzkpkZTKoeb2eyZpSyRmTvl5nr5f6iAyXjNUv5VDvaPIs+bb9qMvy66QplMXwxKI3G0JS4Z7Mi0RH2PZ7MZcXipwrjz40tMfMzVHv5F6kjjxtG88RkpB/2nyFvt6/cXVWDff9X7s1ZYDFRpprCrNP8AdwbTs9fgXG3AxMCvbOroVwkZ9lVd05cglMwsdTJa5uqraiX9/My9DMyE0rNZ6ZCIyuK2aJfWRqQ2eKIJSiLzMi8zIUeFxTjMUlDSxrbKKaNGl2D9i5WGhDjpPL52CTtelaP5ubWiM9bGczxNxmzqMdk5BeZ7FyOqjPMOzqzombpOOGo9rWvmPtyl5F5DFCvFJJS9X06/qxu4jZdadSVSdDVvSMG/FZv8N5Oy4tpSRNe3G/e32v8AmZmXtzwHhub3WT1PDdTm1yb1y8/rrz7bHOblPEQ6vJ7auz6+VApojD7K5lK3HVIWtwkKToy7cu9777+wxPzixb3z9p+Iy7w3ur7E8byM+O63W5+tvqcu9d973zegjWuJ+OSo+RUF9eZ5bY/aRWW2FSeg5JZcSvmWejXyER6SXbYs6sNFPnxfLLiYo4DENqUsNe27rGDy3ldK1NcL5XXHiTPEg80VFy+tt89nWEPH5VUZIOC0RvHI5VkrSS2RoPyLvvQlve23/wCJ+c/8opFZzjijgdmxkEmni5KU+8l1rzxSmGEtNpiGkvh5XDPZpI/Pff6DGseM6380Xex8gy9mGV2w+iuJxBMHBLRuINPP856MiLfKZH3MglWpxk2p+r5vquFiKezcVWoRjLDpWz7sFnuU08tyWst7PLTlYtTGa2EjqdDitmjvTWba+TFEK5VF5pPXkZfQR+NXiamoOLj/ABKzJEMnXHCQ1iyVpNxSjNfczPvzGf6DpouKeAUuVybuDccSG48mxdsHq0kxiirccUZqI0k53LuX8iEbScUsbYwuHTO3GcUsqNLmPmum6KUPE86a0ks1LIz5S+3bZ+Ynto3u5558X0+b9WI/Z1bdcY4d7rcfDDlLVdlnbTL8xZa624pPxaZ2VxAsYjthSzrNxldcySmlRzPSO5F82i76LX3EQVnkkTM6O8tc9vEzbXE2pJSoVQiQ42hbxn0OQu3KRkaufW96IcKLi1h8iqqH8ucy2ZeRKuXXSH2W2XEOpfM9q5luEozJOiLevIYb3FfHK6xW7jacgYRHww6CC+820h9EgneZDiuVeiTrXcu+/QQ6sLJ7/q+nXzL08DilOUFhku8soQS1laz3Xlbd1WdtC0ys1sIrCn5PFbNGGUfM45iiEpT6dzPsMDJrxu2qfC33EzMnYJutuadxZKEmtKiNB7Iy/iItfUV6t4n0sqqu6DK7vNrWptIMdslLNl15l9KiU4aSUskkkzIiI+5mXnoZN7xRxl3DJtLGt85uX5MuI8hVyTCkMpZdJaiRyr2RmX28yLyB14yi/i4c3/cTDZdalVjajmpLNRho7Zp9lk1d3vbTIsr2UZjKsamBR8RMukvzbFiM6cnGkMIZaWrlU5zGRl8OyPQ74VhxLkWkSH+Zc5KZGUyqHm9nsmaUskZk75eZ6+X+ogMl4zVL+VQ72jyLPm2/ajL8uukKZTF8MSiNxtCUuGezItER9j2ezGXF4qcK48+NLTHzM1R7+RepI48bRvPEZKQf9p8hb7ev3F1Vg33/AFfuzVlgMVGmmsKs0/3cG07PX4FxtwMTAr2zq6FcJGfZVXdOXIJTMLHUyWubqq2ol/fzMvQzMhNKzWemQiMritmiX1kakNniiCUoi8zIvMyFHhcU4zFJQ0sa2yimjRpdg/YuVhoQ46Ty+dgk7XpWj+bm1ojPWxnM8TcZs6jHZOQXmexcjqozzDs6s6Jm6TjhqPa1r5j7cpeReQxQrxSSUvV9Ov6sbuI2XWnUlUnQ1b0jBvxWb/DeTsuLaUkTXtxv3t9r/mZmXtzwHhub3WT1PDdTm1yb1y8/rrz7bHOblPEQ6vJ7auz6+VApojD7K5lK3HVIWtwkKToy7cu9777+wxPzixb3z9p+Iy7w3ur7E8byM+O63W5+tvqcu9d973zegjWuJ+OSo+RUF9eZ5bY/aRWW2FSeg5JZcSvmWejXyER6SXbYs6sNFPnxfLLiYo4DENqUsNe27rGDy3ldK1NcL5XXHiTPEg80VFy+tt89nWEPH5VUZIOC0RvHI5VkrSS2RoPyLvvQlve23/4n5z/yikVnOOKOB2bGQSaeLkpT7yXWvPFKYYS02mIaS+HlcM9mkj899/oMax4zrfzRd7HyDL2YZXbD6K4nEEwcEtG4g08/znoyIt8pkfcyCVanGTan6vm+q4WIp7NxVahGMsOlbPuwWe5TTy3Jay3s8tOVi1MZrYSOp0OK2aO9NZtr5MUQrlUXmk9eRl9BH41eJqag4uP8SsyRDJ1xwkNYslaTcUozX3Mz78xn+g6aLingFLlcm7g3HEhuPJsXbB6tJMYoq3HFGaiNJOdy7l/IhG0nFLG2MLh0ztxnFLKjS5j5rpuilDxPOmtJLNSyM+Uvt22fmJ7aN7ueefF9Pm/ViP2dW3XGOHe63Hww5S1XZZ20y/MWWutuKT8WmdlcQLGI7YUs6zcZXXMkppUcz0juRfNou+i19xEFZ5JEzOjvLXPbxM21xNqSUqFUIkONoW8Z9DkLtykZGrn1veiHCi4tYfIqqh/LnMtmXkSrl10h9ltlxDqXzPauZbhKMyToi3ryGG9xXxyusVu42nIGER8MOggvvNtIfRIJ3mQ4rlXok613Lvv0EOrCye/6vp18y9PA4pTlBYZLvLKEEtZWs915W3dVnbQtMrNbCKwp+TxWzRhlHzOOYohKU+ncz7DAya8btqnwt9xMzJ2CbrbmncWShJrSojQeyMv4iLX1FereJ9LKqrugyu7za1qbSDHbJSzZdeZfSolOGklLJJJMyIiPuZl56GTe8UcZdwybSxrfObl+TLiPIVckwpDKWXSWokcq9kZl9vMi8gdeMov4uHN/3Ew2XWpVY2o5qSzUYaO2afZZNXd720yLK9lGYyrGpgUfETLpL82xYjOnJxpDCGWlq5VOcxkZfDsj0O+FYcS5FpEh/mXOSmRlMqh5vZ7JmlLJGZO+Xmevl/qIDJeM1S/lUO9o8iz5tv2oy/LrpCmUxfDEojcbQlLhnsyLREfY9nsxlxeKnCuPPjS0x8zNUe/kXqSOPG0bzxGSkH/afIW+3r9xdVYN9/1fuzVlgMVGmmsKs0/3cG07PX4FxtwMTAr2zq6FcJGfZVXdOXIJTMLHUyWubqq2ol/fzMvQzMhNKzWemQiMritmiX1kakNniiCUoi8zIvMyFHhcU4zFJQ0sa2yimjRpdg/YuVhoQ46Ty+dgk7XpWj+bm1ojPWxnM8TcZs6jHZOQXmexcjqozzDs6s6Jm6TjhqPa1r5j7cpeReQxQrxSSUvV9Ov6sbuI2XWnUlUnQ1b0jBvxWb/DeTsuLaUkTXtxv3t9r/mZmXtzwHhub3WT1PDdTm1yb1y8/rrz7bHOblPEQ6vJ7auz6+VApojD7K5lK3HVIWtwkKToy7cu9777+wxPzixb3z9p+Iy7w3ur7E8byM+O63W5+tvqcu9d973zegjWuJ+OSo+RUF9eZ5bY/aRWW2FSeg5JZcSvmWejXyER6SXbYs6sNFPnxfLLiYo4DENqUsNe27rGDy3ldK1NcL5XXHiTPEg80VFy+tt89nWEPH5VUZIOC0RvHI5VkrSS2RoPyLvvQlve23/4n5z/AMopFZzjijgdmxkEmni5KU+8l1rzxSmGEtNpiGkvh5XDPZpI/Pff6DGseM6380Xex8gy9mGV2w+iuJxBMHBLRuINPP8AOejIi3ymR9zIJVqcZNqfq+b6rhYins3FVqEYyw6Vs+7BZ7lNPLclrLezy05WLUxmthI6nQ4rZo701m2vkxRCuVReaT15GX0EfjV4mpqDi4/xKzJEMnXHCQ1iyVpNxSjNfczPvzGf6DpouKeAUuVybuDccSG48mxdsHq0kxiirccUZqI0k53LuX8iEbScUsbYwuHTO3GcUsqNLmPmum6KUPE86a0ks1LIz5S+3bZ+Ynto3u5558X0+b9WI/Z1bdcY4d7rcfDDlLVdlnbTL8xZa624pPxaZ2VxAsYjthSzrNxldcySmlRzPSO5F82i76LX3EQVnkkTM6O8tc9vEzbXE2pJSoVQiQ42hbxn0OQu3KRkaufW96IcKLi1h8iqqH8ucy2ZeRKuXXSH2W2XEOpfM9q5luEozJOiLevIYb3FfHK6xW7jacgYRHww6CC+820h9EgneZDiuVeiTrXcu+/QQ6sLJ7/q+nXzL08DilOUFhku8soQS1laz3Xlbd1WdtC0ys1sIrCn5PFbNGGUfM45iiEpT6dzPsAp9bxPpZVVd0GV3ebWtTaQY7ZKWbLrzL6VEpw0kpZJJJmRER9zMvPQCssRLJwkv4t+5mo7HpLejiKMk1pu06bTVk/+tZ3urdDTYAA5J9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z" alt="Iran Flagge" style="width:80px;height:53px;object-fit:cover;border-radius:8px;box-shadow:0 3px 10px rgba(0,0,0,.25)">
+    <div><h1>اطلاعات به زبان فارسی</h1><p>Informationen für persischsprachige Geflüchtete</p></div>
   </div>
 </div>
+<section dir="rtl" style="background:var(--sand);">
+  <div class="container">
 
-<section style="background:var(--sand);">
-  <div class="container" style="max-width:780px;">
+    <!-- Intro -->
+    <div style="background:white;border-radius:16px;padding:28px;margin-bottom:32px;border-right:4px solid var(--green-light);">
+      <h2 style="font-family:'Playfair Display',serif;color:var(--green);margin-bottom:12px;">دوستان پناهندگان آرنس‌بورگ – کمک و مشاوره</h2>
+      <p style="color:var(--muted);font-size:15px;line-height:1.9;">ما به پناهندگان کمک می‌کنیم تا زندگی در آلمان را بهتر شروع کنند.</p>
+    </div>
 
-    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    <!-- Was wir machen / nicht machen -->
+    <div class="info-blocks" style="margin-bottom:32px;">
+      <div class="info-block">
+        <h3>✅ ما چه کارهایی انجام می‌دهیم</h3>
+        <ul>
+          <li>کمک برای فهمیدن نامه‌ها و فرم‌ها</li>
+          <li>همراهی در مراجعه به اداره‌ها (در صورت امکان)</li>
+          <li>کلاس‌های زبان آلمانی و تمرین مکالمه</li>
+          <li>کمک برای پیدا کردن کار و اطلاعات درباره معادل‌سازی مدارک</li>
+          <li>معرفی داوطلبان به عنوان همراه (پاتن)</li>
+          <li>کافهٔ باز RuKi – ملاقات با دیگران و تمرین زبان آلمانی</li>
+          <li>معرفی مراکز مشاوره دیگر در آرنس‌بورگ</li>
+        </ul>
+      </div>
+      <div class="info-block no">
+        <h3>❌ ما چه کارهایی انجام نمی‌دهیم</h3>
+        <ul>
+          <li>مشاوره حقوقی نمی‌دهیم</li>
+          <li>کمک مالی مستقیم نمی‌دهیم</li>
+          <li>برای مسکن جستجو یا معرفی انجام نمی‌دهیم</li>
+          <li>مشاوره پزشکی نمی‌دهیم</li>
+        </ul>
+      </div>
+    </div>
 
-    <!-- ══ BEITRAG 1 ══ -->
-    <article class="news-article" id="deutschkurs-2025">
-      <div class="news-article-header">
-        <div class="news-tag">Deutschkurse</div>
-        <div class="news-date">März 2025</div>
-        <h2>Neue Deutschkurs-Gruppen starten im RuKi</h2>
+    <!-- Büro & Sprechzeiten -->
+    <div class="buero-grid">
+      <div style="background:white;border-radius:14px;padding:24px;">
+        <h3 style="font-family:'Playfair Display',serif;color:var(--green);margin-bottom:14px;font-size:1.1rem;">📍 دفتر ما</h3>
+        <p style="font-size:15px;margin-bottom:8px;line-height:1.8;"><strong>Hamburger Straße 131</strong><br>22926 Ahrensburg<br>(زیرزمین)</p>
+        <div style="background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:10px 14px;font-size:13px;color:#856404;margin-top:12px;line-height:1.7;">
+          ⚠️ <strong>ورودی در پشت ساختمان است</strong> – نه از سمت خیابان!
+        </div>
       </div>
-      <div class="news-article-img" style="background:linear-gradient(135deg,#fff3e0,#ffb347)">📚</div>
-      <div class="news-article-body">
-        <p>Im RuKi starten neue Gesprächsgruppen Deutsch. Wir freuen uns über alle, die mitmachen möchten – egal ob als Teilnehmende oder als Helferin bzw. Helfer.</p>
-        <p>Die Gruppen treffen sich regelmäßig während der Sprechstunden und sind offen für alle Sprachniveaus. Ziel ist das freie Gespräch und die Alltagspraxis.</p>
-        <p><strong>Interesse?</strong> Einfach während der Sprechzeiten vorbeikommen oder uns anrufen: 04102 – 824 18 14</p>
+      <div style="background:white;border-radius:14px;padding:24px;">
+        <h3 style="font-family:'Playfair Display',serif;color:var(--green);margin-bottom:14px;font-size:1.1rem;">🕐 ساعات مراجعه</h3>
+        <div class="hours-row"><span class="day">سه‌شنبه</span><span class="time">۱۵:۰۰ – ۱۹:۰۰</span></div>
+        <div class="hours-row"><span class="day">پنجشنبه</span><span class="time">۰۹:۰۰ – ۱۳:۰۰</span></div>
+        <p style="margin-top:16px;font-size:14px;color:var(--green);font-weight:600;line-height:1.7;">می‌توانید بدون وقت قبلی مراجعه کنید. ما خوشحال می‌شویم کمک کنیم.</p>
       </div>
-    </article>
+    </div>
 
-    <!-- ══ BEITRAG 2 ══ -->
-    <article class="news-article" id="infovideo-persisch">
-      <div class="news-article-header">
-        <div class="news-tag">Medien</div>
-        <div class="news-date">Februar 2025</div>
-        <h2>Neues Infovideo jetzt auf Persisch verfügbar</h2>
-      </div>
-      <div class="news-article-img" style="background:linear-gradient(135deg,#e8f4fd,#90caf9)">📹</div>
-      <div class="news-article-body">
-        <p>Unser neues Infovideo erklärt die Angebote des Freundeskreises – und ist jetzt auch auf Persisch verfügbar. Damit möchten wir noch mehr Menschen erreichen und ihnen den ersten Schritt erleichtern.</p>
-        <p>Das Video erklärt auf einfache Weise, was wir machen, wie man uns findet und was man bei uns erwarten kann.</p>
-      </div>
-    </article>
-
-    <!-- ══ BEITRAG 3 ══ -->
-    <article class="news-article" id="firmenmitgliedschaft">
-      <div class="news-article-header">
-        <div class="news-tag">Mitgliedschaft</div>
-        <div class="news-date">Januar 2025</div>
-        <h2>Firmenmitgliedschaft jetzt möglich</h2>
-      </div>
-      <div class="news-article-img" style="background:linear-gradient(135deg,#e8f5e9,#81c784)">🤝</div>
-      <div class="news-article-body">
-        <p>Unternehmen können den Freundeskreis für Flüchtlinge Ahrensburg e.V. jetzt offiziell als Firmenmitglied unterstützen. Mit einer Firmenmitgliedschaft setzen Unternehmen ein sichtbares Zeichen für Integration und gesellschaftliche Verantwortung.</p>
-        <p>Für weitere Informationen zur Firmenmitgliedschaft und den damit verbundenen Möglichkeiten steht euch der Vorstand gerne zur Verfügung.</p>
-        <p><strong>Kontakt:</strong> <a href="mailto:kontakt@freundeskreis-fluechtlinge.de" style="color:var(--green);">kontakt@freundeskreis-fluechtlinge.de</a></p>
-      </div>
-    </article>
-
-    <!-- ══ BEITRAG 4 ══ -->
-    <article class="news-article" id="fahrradwerkstatt-2024">
-      <div class="news-article-header">
-        <div class="news-tag">Fahrradwerkstatt</div>
-        <div class="news-date">Dezember 2024</div>
-        <h2>Fahrradwerkstatt wieder geöffnet</h2>
-      </div>
-      <div class="news-article-img" style="background:linear-gradient(135deg,#f3e5f5,#ce93d8)">🚲</div>
-      <div class="news-article-body">
-        <p>Nach der Winterpause öffnet die Fahrradwerkstatt wieder jeden Donnerstag. Geflüchtete und Ahrensburger reparieren gemeinsam gespendete Räder – und wer ein Fahrrad braucht, kann sich eins mitnehmen.</p>
-        <p>Die Werkstatt ist ein beliebter Treffpunkt, bei dem Sprache keine große Rolle spielt – man arbeitet einfach zusammen. Alle sind herzlich eingeladen!</p>
-      </div>
-    </article>
-
-    <!-- ══ BEITRAG 5 ══ -->
-    <article class="news-article" id="mi4y-november">
-      <div class="news-article-header">
-        <div class="news-tag">Mi4y</div>
-        <div class="news-date">November 2024</div>
-        <h2>Mi4y Teestube – ein voller Erfolg</h2>
-      </div>
-      <div class="news-article-img" style="background:linear-gradient(135deg,#e8f5e9,#66bb6a)">🌍</div>
-      <div class="news-article-body">
-        <p>Über 30 Teilnehmende beim letzten monatlichen Treffen von <strong>Mi4y – Migranten helfen Migranten</strong>. Die Teestube bringt Menschen zusammen, die selbst den Weg der Migration kennen und anderen davon berichten oder helfen wollen.</p>
-        <p>Das nächste Treffen findet wie gewohnt monatlich statt. Alle Interessierten sind willkommen – einfach vorbeikommen!</p>
-      </div>
-    </article>
+    <div style="margin-top:8px;text-align:right;">
+      <a href="migranten.html" class="btn-green">→ بازگشت</a>
+    </div>
 
   </div>
 </section>
@@ -168,7 +126,6 @@
     <span style="color:var(--green-light)">Made with ❤ for our community</span>
   </div>
 </footer>
-
 <script>
 const toggle = document.getElementById('navToggle');
 const links  = document.querySelector('.nav-links');

@@ -3,8 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arabisch – Freundeskreis für Flüchtlinge Ahrensburg e.V.</title>
+<title>Datenschutz – Freundeskreis für Flüchtlinge Ahrensburg e.V.</title>
 <link rel="stylesheet" href="style.css">
+<style>
+.prose { max-width:720px; }
+.prose h2 { font-family:'Playfair Display',serif; color:var(--green); font-size:1.3rem; margin:32px 0 10px; padding-bottom:8px; border-bottom:2px solid var(--green-pale); }
+.prose h3 { font-size:1rem; font-weight:700; margin:20px 0 6px; color:var(--text); }
+.prose p { color:var(--muted); line-height:1.8; margin-bottom:12px; font-size:15px; }
+.prose ul { list-style:disc; padding-left:20px; margin-bottom:12px; }
+.prose ul li { color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:4px; }
+.prose a { color:var(--green); }
+.prose .info-box { background:white; border-radius:12px; padding:20px 24px; margin-bottom:20px; border-left:4px solid var(--green-light); }
+.prose .info-box p { margin-bottom:4px; }
+</style>
 </head>
 <body>
 <nav>
@@ -12,7 +23,7 @@
   <ul class="nav-links">
     <li><a href="index.html">Start</a></li>
     <li>
-      <a href="migranten.html" class="active">Seiten für Migranten ▾</a>
+      <a href="migranten.html">Seiten für Migranten ▾</a>
       <div class="dropdown">
         <a href="persisch.html">🇮🇷 Persisch (فارسی)</a>
         <a href="arabisch.html">🇸🇾 Arabisch (العربية)</a>
@@ -27,68 +38,65 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<div class="lang-hero">
-  <div class="lang-hero-inner">
-    <img src="data:image/png;base64,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71n+O3i5tuub1F6zWqjc58dBE8W+3QuJ8ma3I4f3ulhPrtZKibKZ7Urwx0+/vm1e987ZZJZ/wPFqO2YhaQC1sNqh6JNH3kPff95oaVlL3Oe8ve4uc47JJ2SV+Im9pkzXy+nOxERGYiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgItl4wyvhc2yC355gnhVkTA03CmkleybX7z2B4LT/y7BO/LyV7/ABn4VP7KP/x6z/yrp7MfhK3rvylY98/Ry+i6g/GfhU/so/8Ax6z/AMr8/GvhV3/wh3+hV/8AlNO/MY/Nr8XMCLp38b+Fb+xX/wChVfzJ+N/Ct/Yr/wDQqv5k0eYx+bX4uYkXThvnwrdv9ySf6FV/Mvz8d+FfX/AZf9Cq/mTR5jH5tfi5kRdNfj3wsf2BN/oVP86fj3wsf2BN/oVP86aTzGPza/H6OZUXTJv/AMLAG/6Pzn7eDU/zr8OQfCyPLHKg/pDUfzpo8xr+bX4/RzOi6X/pD8LX/wCNVX+jUfzqfwKh+HfN8gbY8exCoqKsxuld1MnaxjG625xL+w2QP1ICcLqvgOKdVyV37/o5+zzjLJcLx2zX28/JfK3ZgdC2GbrfGS0ODXjQ76O+xI+6pS7Tz298UXi6R2TIsTyG5yWd76KnZHb6p0bC09JDOggO30gb9QB9lGWfH+CbjkcFgPH12oqyaTwh87RVcLGu1sBzi7Q35D3JCvC2yf42s31jvGvbP0cfou0eU+AsAnwq5VNhtX4PcqOmkqIJop5HNeWNLuh7XEjpOtbHcf8AQ8XKTGnj8V4S/hrRF+4iIo8oiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgKwYHmWQ4Pen3fG60UlW+F0D3OibIHMJBIIcCPNrT/AAVfRFraazus6lK1mSX6rvM14mu9Z89NUGpfMyUsPiF3UXDWtd+/byX8XG/Xu41stbX3evqamZ3VJLJUOc5x+52o1EJvae60VHIec1FgdYZ8ru8ttezodA+pcQ5n9Uk9y37b0quiItr2t6U7EREciIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiIP/2Q==" alt="Arabisch Flagge" style="width:80px;height:53px;object-fit:cover;border-radius:8px;box-shadow:0 3px 10px rgba(0,0,0,.25)">
-    <div><h1>معلومات باللغة العربية</h1><p>Informationen für arabischsprachige Geflüchtete</p></div>
+<div class="hero hero-sm">
+  <div class="hero-inner">
+    <h1><span>Datenschutzerklärung</span></h1>
   </div>
 </div>
-<section dir="rtl" style="background:var(--sand);">
-  <div class="container">
+<section style="background:var(--sand);">
+  <div class="container prose">
 
-    <div style="background:white;border-radius:16px;padding:28px;margin-bottom:32px;border-left:4px solid var(--green-light);">
-      <h2 style="font-family:'Playfair Display',serif;color:var(--green);margin-bottom:12px;">أصدقاء اللاجئين في آرنسبرغ – المساعدة والاستشارة</h2>
-      <p style="color:var(--muted);font-size:15px;line-height:1.9;">نحن نساعد اللاجئين في بداية حياتهم في ألمانيا.</p>
+    <h2>1. Verantwortliche Stelle</h2>
+    <div class="info-box">
+      <p><strong>Freundeskreis für Flüchtlinge Ahrensburg e.V.</strong></p>
+      <p>Hamburger Straße 131, 22926 Ahrensburg</p>
+      <p>Telefon: 04102 – 824 18 14</p>
+      <p>E-Mail: <a href="mailto:kontakt@freundeskreis-fluechtlinge.de">kontakt@freundeskreis-fluechtlinge.de</a></p>
     </div>
+    <p>Verantwortlich im Sinne der DSGVO ist der Vorstand des Vereins, vertreten durch den 1. Vorsitzenden Nico Markward.</p>
 
-    <div class="info-blocks" style="margin-bottom:32px;">
-      <div class="info-block">
-        <h3>✅ ماذا نفعل</h3>
-        <ul>
-          <li>المساعدة في فهم الرسائل والنماذج</li>
-          <li>مرافقة إلى الدوائر الرسمية (إذا كان ذلك ممكنًا)</li>
-          <li>دورات لغة ألمانية ومجموعات للمحادثة</li>
-          <li>المساعدة في البحث عن عمل ومعلومات عن معادلة الشهادات</li>
-          <li>ربط اللاجئين بمتطوعين كمرافقين (باتن)</li>
-          <li>مقهى مفتوح RuKi – لقاء الناس والتدرّب على الألمانية</li>
-          <li>معلومات عن مراكز استشارة أخرى في آرنسبرغ</li>
-        </ul>
-      </div>
-      <div class="info-block no">
-        <h3>❌ ماذا لا نفعل</h3>
-        <ul>
-          <li>لا نقدم استشارة قانونية</li>
-          <li>لا نقدم مساعدة مالية مباشرة</li>
-          <li>لا نساعد في البحث عن سكن</li>
-          <li>لا نقدم استشارة طبية</li>
-        </ul>
-      </div>
-    </div>
+    <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+    <p>Diese Website verwendet <strong>keine Cookies</strong>, kein Web-Tracking und keine Analyse-Tools. Beim Besuch unserer Website werden keine personenbezogenen Daten aktiv durch uns gespeichert.</p>
+    <p>Unser Hosting-Anbieter (ALL-INKL.COM, René Kulka, Hauptstraße 68, 02742 Friedersdorf) erhebt beim Aufruf dieser Website automatisch sogenannte Server-Logfiles, die Ihr Browser übermittelt. Dies sind:</p>
+    <ul>
+      <li>IP-Adresse des anfragenden Rechners</li>
+      <li>Datum und Uhrzeit des Zugriffs</li>
+      <li>Name und URL der abgerufenen Datei</li>
+      <li>Website, von der aus der Zugriff erfolgt (Referrer-URL)</li>
+      <li>Verwendeter Browser und ggf. das Betriebssystem Ihres Rechners</li>
+    </ul>
+    <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Die Logfiles werden nach spätestens 7 Tagen gelöscht. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
 
-    <div class="buero-grid">
-      <div style="background:white;border-radius:14px;padding:24px;">
-        <h3 style="font-family:'Playfair Display',serif;color:var(--green);margin-bottom:14px;font-size:1.1rem;">📍 مكتبنا</h3>
-        <p style="font-size:15px;margin-bottom:8px;line-height:1.8;"><strong>Hamburger Straße 131</strong><br>22926 Ahrensburg<br>(الطابق السفلي)</p>
-        <div style="background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:10px 14px;font-size:13px;color:#856404;margin-top:12px;line-height:1.7;">
-          ⚠️ <strong>المدخل في الجهة الخلفية من المبنى</strong> وليس من الشارع.
-        </div>
-      </div>
-      <div style="background:white;border-radius:14px;padding:24px;">
-        <h3 style="font-family:'Playfair Display',serif;color:var(--green);margin-bottom:14px;font-size:1.1rem;">🕐 ساعات الاستشارة</h3>
-        <div class="hours-row"><span class="day">الثلاثاء</span><span class="time">15:00 – 19:00</span></div>
-        <div class="hours-row"><span class="day">الخميس</span><span class="time">09:00 – 13:00</span></div>
-        <p style="margin-top:16px;font-size:14px;color:var(--green);font-weight:600;line-height:1.7;">يمكنكم الحضور بدون موعد. يسعدنا مساعدتكم.</p>
-      </div>
-    </div>
+    <h2>3. Kontaktformular</h2>
+    <p>Wenn Sie uns über das Kontaktformular eine Nachricht senden, werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Thema, Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und direkt per E-Mail an uns übermittelt.</p>
+    <p>Die Daten werden nicht gespeichert, nicht an Dritte weitergegeben und nur zur Beantwortung Ihrer Anfrage genutzt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung / berechtigtes Interesse).</p>
 
-    <div style="margin-top:8px;text-align:right;">
-      <a href="migranten.html" class="btn-green">→ عودة</a>
-    </div>
+    <h2>4. E-Mail-Kontakt</h2>
+    <p>Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben einschließlich der von Ihnen angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+
+    <h2>5. Ihre Rechte</h2>
+    <p>Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:</p>
+    <ul>
+      <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+      <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+      <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+      <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+      <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+      <li>Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+    </ul>
+    <p>Zur Geltendmachung dieser Rechte wenden Sie sich bitte an: <a href="mailto:kontakt@freundeskreis-fluechtlinge.de">kontakt@freundeskreis-fluechtlinge.de</a></p>
+
+    <h2>6. Beschwerderecht</h2>
+    <p>Sie haben das Recht, sich bei der zuständigen Datenschutzaufsichtsbehörde zu beschweren. Zuständig ist das Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein (ULD):</p>
+    <p>Holstenstraße 98, 24103 Kiel<br>
+    Telefon: 0431 988-1200<br>
+    E-Mail: <a href="mailto:mail@datenschutzzentrum.de">mail@datenschutzzentrum.de</a></p>
+
+    <h2>7. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+    <p>Diese Datenschutzerklärung hat den Stand März 2025. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.</p>
 
   </div>
 </section>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -126,17 +134,11 @@
 <script>
 const toggle = document.getElementById('navToggle');
 const links  = document.querySelector('.nav-links');
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('open');
-  links.classList.toggle('open');
-});
+toggle.addEventListener('click', () => { toggle.classList.toggle('open'); links.classList.toggle('open'); });
 document.querySelectorAll('.nav-links > li > a').forEach(a => {
   a.addEventListener('click', function(e) {
     const li = this.parentElement;
-    if (li.querySelector('.dropdown') && window.innerWidth <= 900) {
-      e.preventDefault();
-      li.classList.toggle('open');
-    }
+    if (li.querySelector('.dropdown') && window.innerWidth <= 900) { e.preventDefault(); li.classList.toggle('open'); }
   });
 });
 </script>
