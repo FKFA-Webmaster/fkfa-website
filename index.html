@@ -1,0 +1,76 @@
+backend:
+  name: github
+  repo: fkfa-webmaster/fkfa-website
+  branch: main
+  base_url: https://sveltia-cms-auth.torstenbull.workers.dev
+
+# Medien (Bilder) werden in diesem Ordner gespeichert
+media_folder: "images/uploads"
+public_folder: "images/uploads"
+
+# Sprache der Oberfläche
+locale: de
+
+collections:
+  # ── NEUIGKEITEN ──────────────────────────────────────────────────────────
+  - name: "neuigkeiten"
+    label: "Neuigkeiten"
+    label_singular: "Beitrag"
+    folder: "_neuigkeiten"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
+      - label: "Kategorie"
+        name: "kategorie"
+        widget: "select"
+        options:
+          - { label: "Deutschkurse", value: "Deutschkurse" }
+          - { label: "Veranstaltungen", value: "Veranstaltungen" }
+          - { label: "Mitgliedschaft", value: "Mitgliedschaft" }
+          - { label: "Fahrradwerkstatt", value: "Fahrradwerkstatt" }
+          - { label: "Mi4y", value: "Mi4y" }
+          - { label: "Café RuKi", value: "Café RuKi" }
+          - { label: "Medien", value: "Medien" }
+          - { label: "Allgemeines", value: "Allgemeines" }
+      - { label: "Kurzbeschreibung (für Startseite)", name: "teaser", widget: "string", hint: "Max. 120 Zeichen – erscheint im Karussell auf der Startseite" }
+      - { label: "Beitragsbild", name: "bild", widget: "image", required: false, hint: "Optional – wird oben im Beitrag angezeigt" }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
+
+  # ── VORSTAND ─────────────────────────────────────────────────────────────
+  - name: "vorstand"
+    label: "Vorstand"
+    label_singular: "Vorstandsmitglied"
+    folder: "_vorstand"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Rolle", name: "rolle", widget: "string", hint: "z.B. 1. Vorsitzender" }
+      - { label: "E-Mail", name: "email", widget: "string" }
+      - { label: "Foto", name: "foto", widget: "image", required: false }
+      - { label: "Reihenfolge", name: "order", widget: "number", default: 1, hint: "1 = zuerst angezeigt" }
+
+  # ── SPRECHZEITEN / ALLGEMEINE INFOS ──────────────────────────────────────
+  - name: "einstellungen"
+    label: "Einstellungen"
+    editor:
+      preview: false
+    files:
+      - label: "Kontakt & Sprechzeiten"
+        name: "kontakt"
+        file: "_einstellungen/kontakt.yml"
+        fields:
+          - { label: "Telefon", name: "telefon", widget: "string" }
+          - { label: "E-Mail", name: "email", widget: "string" }
+          - { label: "Adresse", name: "adresse", widget: "string" }
+          - { label: "Sprechstunde Di (von)", name: "di_von", widget: "string", default: "15:00" }
+          - { label: "Sprechstunde Di (bis)", name: "di_bis", widget: "string", default: "19:00" }
+          - { label: "Sprechstunde Do (von)", name: "do_von", widget: "string", default: "09:00" }
+          - { label: "Sprechstunde Do (bis)", name: "do_bis", widget: "string", default: "13:00" }
+          - { label: "IBAN", name: "iban", widget: "string" }
+          - { label: "BIC", name: "bic", widget: "string" }
