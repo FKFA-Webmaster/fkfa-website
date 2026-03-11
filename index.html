@@ -61,62 +61,7 @@
       <button class="carousel-btn carousel-prev" id="newsPrev" aria-label="Zurück">&#8592;</button>
       <div class="carousel-track-outer">
         <div class="carousel-track" id="newsTrack">
-
-          <!-- Karte 1 – neueste zuerst -->
-          <div class="news-card carousel-item">
-            <div class="news-card-img" style="background:linear-gradient(135deg,#fff3e0,#ffb347)">📚</div>
-            <div class="news-card-body">
-              <div class="news-date">März 2025</div>
-              <h3>Neue Deutschkurs-Gruppen starten</h3>
-              <p>Im RuKi starten neue Gesprächsgruppen Deutsch. Bitte meldet euch im Büro an. HelferInnen gesucht!</p>
-              <a href="news.html#deutschkurs-2025" class="readmore">Weiterlesen →</a>
-            </div>
-          </div>
-
-          <!-- Karte 2 -->
-          <div class="news-card carousel-item">
-            <div class="news-card-img">📹</div>
-            <div class="news-card-body">
-              <div class="news-date">Februar 2025</div>
-              <h3>Infovideo in Persisch</h3>
-              <p>Unser neues Infovideo erklärt die Angebote des Freundeskreises – jetzt auf Persisch verfügbar.</p>
-              <a href="news.html#infovideo-persisch" class="readmore">Weiterlesen →</a>
-            </div>
-          </div>
-
-          <!-- Karte 3 -->
-          <div class="news-card carousel-item">
-            <div class="news-card-img" style="background:linear-gradient(135deg,#e8f4fd,#64b5f6)">🤝</div>
-            <div class="news-card-body">
-              <div class="news-date">Januar 2025</div>
-              <h3>Firmenmitgliedschaft jetzt möglich</h3>
-              <p>Unternehmen können den Freundeskreis jetzt offiziell als Firmenmitglied unterstützen.</p>
-              <a href="news.html#firmenmitgliedschaft" class="readmore">Weiterlesen →</a>
-            </div>
-          </div>
-
-          <!-- Karte 4 – Beispiel ältere Meldung -->
-          <div class="news-card carousel-item">
-            <div class="news-card-img" style="background:linear-gradient(135deg,#f3e5f5,#ce93d8)">🚲</div>
-            <div class="news-card-body">
-              <div class="news-date">Dezember 2024</div>
-              <h3>Fahrradwerkstatt wieder geöffnet</h3>
-              <p>Nach der Winterpause öffnet die Fahrradwerkstatt wieder jeden Donnerstag. Alle sind herzlich eingeladen!</p>
-              <a href="news.html#fahrradwerkstatt-2024" class="readmore">Weiterlesen →</a>
-            </div>
-          </div>
-
-          <!-- Karte 5 -->
-          <div class="news-card carousel-item">
-            <div class="news-card-img" style="background:linear-gradient(135deg,#e8f5e9,#81c784)">🌍</div>
-            <div class="news-card-body">
-              <div class="news-date">November 2024</div>
-              <h3>Mi4y Teestube – Rückblick</h3>
-              <p>Über 30 Teilnehmende beim letzten monatlichen Treffen von Migranten helfen Migranten. Ein voller Erfolg!</p>
-              <a href="news.html#mi4y-november" class="readmore">Weiterlesen →</a>
-            </div>
-          </div>
-
+          <!-- wird dynamisch befüllt -->
         </div>
       </div>
       <button class="carousel-btn carousel-next" id="newsNext" aria-label="Weiter">&#8594;</button>
@@ -125,6 +70,74 @@
     <div class="carousel-dots" id="newsDots"></div>
 
     <script>
+    // ── Beiträge dynamisch aus GitHub laden ──────────────────────────────
+    const REPO   = 'fkfa-webmaster/fkfa-website';
+    const FOLDER = '_neuigkeiten';
+
+    function parseFrontmatter(text) {
+      const match = text.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+      if (!match) return { meta: {}, body: text };
+      const meta = {};
+      match[1].split('\n').forEach(line => {
+        const [k, ...v] = line.split(':');
+        if (k && v.length) meta[k.trim()] = v.join(':').trim().replace(/^["']|["']$/g, '');
+      });
+      return { meta, body: match[2].trim() };
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      return new Date(dateStr).toLocaleDateString('de-DE', { year: 'numeric', month: 'long' });
+    }
+
+    async function loadCarousel() {
+      const track = document.getElementById('newsTrack');
+      try {
+        const res   = await fetch(`https://api.github.com/repos/${REPO}/contents/${FOLDER}`, {
+          headers: { 'Accept': 'application/vnd.github.v3+json' }
+        });
+        if (!res.ok) throw new Error('API Fehler');
+        const files = await res.json();
+        const mdFiles = files.filter(f => f.name.endsWith('.md'))
+                             .sort((a, b) => b.name.localeCompare(a.name))
+                             .slice(0, 5); // max 5 im Karussell
+
+        if (mdFiles.length === 0) {
+          track.innerHTML = '<div class="carousel-item news-card"><div class="news-card-body"><p>Noch keine Beiträge vorhanden.</p></div></div>';
+          initCarousel();
+          return;
+        }
+
+        const articles = await Promise.all(mdFiles.map(async f => {
+          const r    = await fetch(f.download_url);
+          const text = await r.text();
+          const { meta } = parseFrontmatter(text);
+          return { meta, slug: f.name.replace('.md', '') };
+        }));
+
+        articles.sort((a, b) => (b.meta.date || '').localeCompare(a.meta.date || ''));
+
+        const emojis = ['📰','🌍','🤝','🚲','📚'];
+        track.innerHTML = articles.map((a, i) => `
+          <div class="news-card carousel-item">
+            <div class="news-card-img">${emojis[i % emojis.length]}</div>
+            <div class="news-card-body">
+              <div class="news-date">${formatDate(a.meta.date)}</div>
+              <h3>${a.meta.title || 'Neuer Beitrag'}</h3>
+              <p>${a.meta.teaser || ''}</p>
+              <a href="news.html#${a.slug}" class="readmore">Weiterlesen →</a>
+            </div>
+          </div>`).join('');
+
+        initCarousel();
+      } catch(e) {
+        console.error('News laden fehlgeschlagen:', e);
+        track.innerHTML = '<div class="carousel-item news-card"><div class="news-card-body"><p>Neuigkeiten konnten nicht geladen werden.</p></div></div>';
+        initCarousel();
+      }
+    }
+
+    function initCarousel() {
     (function() {
       const track   = document.getElementById('newsTrack');
       const items   = track.querySelectorAll('.carousel-item');
@@ -188,6 +201,9 @@
       window.addEventListener('resize', init);
       init();
     })();
+    } // end initCarousel
+
+    loadCarousel();
     </script>
   </div>
 </section>
