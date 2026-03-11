@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: fkfa-webmaster/fkfa-website
+  repo: FKFA-Website-Admin/fkfa-website
   branch: main
   base_url: https://sveltia-cms-auth.torstenbull.workers.dev
 
