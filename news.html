@@ -209,7 +209,7 @@ async function loadNews() {
 
     // Anchor-Sprung nach Laden
     if (window.location.hash) {
-      const el = document.querySelector(window.location.hash);
+      const el = document.getElementById(window.location.hash.slice(1));
       if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
     }
 
