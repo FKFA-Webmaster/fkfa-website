@@ -286,7 +286,8 @@ footer ul a:hover { color:var(--green-light); }
     max-width: 340px;
   }
 }
-/* Hero-Titel auf der Vereinsseite */
-.hero h1 {
+/* Hero-Titel überall dunkelblau */
+.hero h1,
+.hero h1 span {
   color: #0b3d6d;
 }
