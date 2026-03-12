@@ -58,7 +58,11 @@ section { padding:56px 32px; }
 .news-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; }
 .news-card { background:white; border-radius:16px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.05); border:1px solid rgba(0,0,0,.04); transition:all .2s; }
 .news-card:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.1); }
-.news-card-img { height:160px; background:linear-gradient(135deg,var(--green-pale),var(--green-light)); display:flex; align-items:center; justify-content:center; font-size:48px; }
+.news-card-header { height:72px; display:flex; align-items:center; padding:0 20px; gap:12px; position:relative; overflow:hidden; }
+.news-card-header::after { content:''; position:absolute; right:-20px; top:0; bottom:0; width:80px; background:rgba(255,255,255,0.12); transform:skewX(-12deg); }
+.news-cat-icon { width:36px; height:36px; background:rgba(255,255,255,0.22); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+.news-cat-label { font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.75); display:block; margin-bottom:2px; }
+.news-cat-title { font-size:14px; font-weight:700; color:white; line-height:1.2; }
 .news-card-body { padding:20px; }
 .news-date { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; font-weight:600; margin-bottom:6px; }
 .news-card h3 { font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:8px; }
