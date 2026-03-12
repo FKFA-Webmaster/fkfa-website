@@ -130,7 +130,7 @@
         const defaultCat = { bg: 'linear-gradient(120deg,#374151,#6b7280)', icon: '📰' };
 
         track.innerHTML = articles.map((a) => {
-          const cat = a.meta.category || 'Neuigkeit';
+          const rawCat = a.meta.category || a.meta.kategorie || 'Neuigkeit';
           const cfg = catConfig[cat] || defaultCat;
           return `
           <div class="news-card carousel-item">
