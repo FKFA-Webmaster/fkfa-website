@@ -120,17 +120,34 @@
 
         articles.sort((a, b) => (b.meta.date || '').localeCompare(a.meta.date || ''));
 
-        const emojis = ['📰','🌍','🤝','🚲','📚'];
-        track.innerHTML = articles.map((a, i) => `
+        const catConfig = {
+          'Neuigkeit':    { bg: 'linear-gradient(120deg,#2d6a4f,#52b788)', icon: '📣' },
+          'Projekt':      { bg: 'linear-gradient(120deg,#1565c0,#42a5f5)', icon: '🛠️' },
+          'Veranstaltung':{ bg: 'linear-gradient(120deg,#6a1f6e,#ba68c8)', icon: '📅' },
+          'Ukraine':      { bg: 'linear-gradient(120deg,#1a5276,#2980b9)', icon: '🇺🇦' },
+          'Mitmachen':    { bg: 'linear-gradient(120deg,#7b341e,#e76f51)', icon: '🤝' },
+        };
+        const defaultCat = { bg: 'linear-gradient(120deg,#374151,#6b7280)', icon: '📰' };
+
+        track.innerHTML = articles.map((a) => {
+          const cat = a.meta.category || 'Neuigkeit';
+          const cfg = catConfig[cat] || defaultCat;
+          return `
           <div class="news-card carousel-item">
-            <div class="news-card-img">${emojis[i % emojis.length]}</div>
+            <div class="news-card-header" style="background:${cfg.bg}">
+              <div class="news-cat-icon">${cfg.icon}</div>
+              <div>
+                <span class="news-cat-label">${cat}</span>
+                <span class="news-cat-title">${formatDate(a.meta.date)}</span>
+              </div>
+            </div>
             <div class="news-card-body">
-              <div class="news-date">${formatDate(a.meta.date)}</div>
               <h3>${a.meta.title || 'Neuer Beitrag'}</h3>
               <p>${a.meta.teaser || ''}</p>
               <a href="news.html#${a.slug}" class="readmore">Weiterlesen →</a>
             </div>
-          </div>`).join('');
+          </div>`;
+        }).join('');
 
         initCarousel();
       } catch(e) {
