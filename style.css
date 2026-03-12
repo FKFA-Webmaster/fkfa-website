@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap');
 
 :root {
-  --green: #2d6a4f;
-  --green-light: #52b788;
-  --green-pale: #d8f3dc;
-  --sand: #f8f4ee;
-  --warm: #e76f51;
-  --text: #1a1a2e;
+  --green: #1565a8;
+  --green-light: #4a90c8;
+  --green-pale: #e8f3fb;
+  --sand: #f7f9fc;
+  --warm: #e87722;
+  --text: #1c2a3a;
   --muted: #6b7280;
   --white: #ffffff;
 }
@@ -70,7 +70,7 @@ section { padding:56px 32px; }
 .news-card a.readmore { display:inline-block; margin-top:12px; font-size:13px; font-weight:600; color:var(--green); text-decoration:none; }
 
 /* DONATE BANNER */
-.donate-banner { background:linear-gradient(135deg,var(--warm),#9b2335); padding:48px 32px; text-align:center; color:white; }
+.donate-banner { background:linear-gradient(135deg,#e87722,#c05a0a); padding:48px 32px; text-align:center; color:white; }
 .donate-banner h2 { font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3vw,2.2rem); margin-bottom:10px; }
 .donate-banner p { opacity:.9; max-width:520px; margin:0 auto 20px; font-weight:300; }
 .iban-box { display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3); border-radius:10px; padding:12px 24px; font-family:monospace; font-size:1rem; margin-bottom:24px; }
