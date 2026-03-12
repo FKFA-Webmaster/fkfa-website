@@ -257,17 +257,32 @@ footer ul a:hover { color:var(--green-light); }
   .buero-grid { grid-template-columns:1fr; }
 }
 
-/* Illustration rechts neben Integrations-Text */
 
-.integration-illustration {
-  position:absolute;
-  right:40px;
-  top:50%;
-  transform:translateY(-50%);
-  max-width:420px;
+/* Illustration im Abschnitt "Gemeinsam für Integration in Ahrensburg" */
+.verein-illustration-box {
+  background: linear-gradient(180deg, #f7fbff 0%, #eef6fc 100%);
+  border: 1px solid rgba(21, 101, 168, 0.10);
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 
-.integration-illustration img{
-  width:100%;
-  height:auto;
+.verein-illustration-box img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .verein-illustration-box {
+    min-height: 220px;
+  }
+  .verein-illustration-box img {
+    max-width: 340px;
+  }
 }
