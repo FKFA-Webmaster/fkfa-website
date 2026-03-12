@@ -131,6 +131,7 @@
 
         track.innerHTML = articles.map((a) => {
           const rawCat = a.meta.category || a.meta.kategorie || 'Neuigkeit';
+          const cat = rawCat === 'Veranstaltungen' ? 'Veranstaltung' : rawCat;
           const cfg = catConfig[cat] || defaultCat;
           return `
           <div class="news-card carousel-item">
