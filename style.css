@@ -326,3 +326,12 @@ footer ul a:hover { color:var(--green-light); }
 @media (max-width: 600px) {
   .buero-grid { grid-template-columns:1fr; }
 }
+
+
+/* Hero headline readability adjustment */
+.hero h1,
+.hero .hero-content h1,
+.hero-content h1 {
+  color: #0b3d6d !important;
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.6);
+}
