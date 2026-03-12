@@ -257,20 +257,17 @@ footer ul a:hover { color:var(--green-light); }
   .buero-grid { grid-template-columns:1fr; }
 }
 
+/* Illustration rechts neben Integrations-Text */
 
-/* --- Nur gezielte Lesbarkeitskorrekturen im Hero --- */
-.hero h1 {
-  color: white;
-  text-shadow: none;
+.integration-illustration {
+  position:absolute;
+  right:40px;
+  top:50%;
+  transform:translateY(-50%);
+  max-width:420px;
 }
 
-.hero h1 span {
-  color: #0b3d6d;
-  text-shadow: none;
+.integration-illustration img{
+  width:100%;
+  height:auto;
 }
-
-.hero-credit {
-  color: #0b3d6d !important;
-  font-weight: 600;
-}
-
