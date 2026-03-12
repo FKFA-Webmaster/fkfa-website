@@ -286,8 +286,16 @@ footer ul a:hover { color:var(--green-light); }
     max-width: 340px;
   }
 }
-/* Hero-Titel überall dunkelblau */
-.hero h1,
+/* Hintergrund für Hero-Titel */
+
+.hero h1 {
+  color: #0b3d6d;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+
 .hero h1 span {
   color: #0b3d6d;
 }
