@@ -74,7 +74,7 @@
 
     <script>
     // ── Beiträge dynamisch aus GitHub laden ──────────────────────────────
-    const REPO   = 'fkfa-webmaster/fkfa-website';
+    const REPO   = 'FKFA-Website-Admin/fkfa-website';
     const FOLDER = '_neuigkeiten';
 
     function parseFrontmatter(text) {
@@ -120,17 +120,34 @@
 
         articles.sort((a, b) => (b.meta.date || '').localeCompare(a.meta.date || ''));
 
-        const emojis = ['📰','🌍','🤝','🚲','📚'];
-        track.innerHTML = articles.map((a, i) => `
+        const catConfig = {
+          'Neuigkeit':    { bg: 'linear-gradient(120deg,#1565a8,#4a90c8)', icon: '📣' },
+          'Projekt':      { bg: 'linear-gradient(120deg,#1565c0,#42a5f5)', icon: '🛠️' },
+          'Veranstaltung':{ bg: 'linear-gradient(120deg,#6a1f6e,#ba68c8)', icon: '📅' },
+          'Ukraine':      { bg: 'linear-gradient(120deg,#1a5276,#2980b9)', icon: '🇺🇦' },
+          'Mitmachen':    { bg: 'linear-gradient(120deg,#7b341e,#e87722)', icon: '🤝' },
+        };
+        const defaultCat = { bg: 'linear-gradient(120deg,#374151,#6b7280)', icon: '📰' };
+
+        track.innerHTML = articles.map((a) => {
+          const cat = a.meta.category || 'Neuigkeit';
+          const cfg = catConfig[cat] || defaultCat;
+          return `
           <div class="news-card carousel-item">
-            <div class="news-card-img">${emojis[i % emojis.length]}</div>
+            <div class="news-card-header" style="background:${cfg.bg}">
+              <div class="news-cat-icon">${cfg.icon}</div>
+              <div>
+                <span class="news-cat-label">${cat}</span>
+                <span class="news-cat-title">${formatDate(a.meta.date)}</span>
+              </div>
+            </div>
             <div class="news-card-body">
-              <div class="news-date">${formatDate(a.meta.date)}</div>
               <h3>${a.meta.title || 'Neuer Beitrag'}</h3>
               <p>${a.meta.teaser || ''}</p>
               <a href="news.html#${a.slug}" class="readmore">Weiterlesen →</a>
             </div>
-          </div>`).join('');
+          </div>`;
+        }).join('');
 
         initCarousel();
       } catch(e) {
@@ -227,7 +244,9 @@
         <p>Sowohl für Geflüchtete – durch Beratung, Sprachkurse und Begleitung im Alltag – als auch für die einheimische Bevölkerung, damit sie wissen, wo sie effektiv helfen können.</p>
         <a href="verein.html" class="btn-green" style="margin-top:16px;">Mehr über den Verein →</a>
       </div>
-      <div class="verein-img-placeholder">🏘️</div>
+      <div class="verein-img-placeholder verein-illustration-box">
+        <img src="integration_illustration.png" alt="Illustration vom Ahrensburger Schloss mit Handschlag">
+      </div>
     </div>
   </div>
 </section>
