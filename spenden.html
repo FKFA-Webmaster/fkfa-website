@@ -42,15 +42,15 @@
         <div class="bank-box"><div class="label">Kontoinhaber</div><div class="value">Freundeskreis für Flüchtlinge Ahrensburg e.V.</div></div>
         <div class="bank-box"><div class="label">IBAN</div><div class="value">DE83 2135 2240 0179 1326 34</div></div>
         <div class="bank-box"><div class="label">BIC / Bank</div><div class="value">NOLADE21HOL · Sparkasse Holstein</div></div>
-        <p style="font-size:14px;color:var(--muted);margin-top:16px;">Wir sind gemeinnützig anerkannt. Auf Wunsch stellen wir gerne eine Spendenquittung aus. Schreiben Sie uns an <strong>kontakt@freundeskreis-fluechtlinge.de</strong></p>
+        <p style="font-size:14px;color:var(--muted);margin-top:16px;">Wir sind gemeinnützig anerkannt. Auf Wunsch stellen wir gerne eine Spendenquittung aus. Schreiben Sie uns an <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6b0004051f0a001f2b0d190e1e050f0e1800190e0218460d071e0e08031f0702050c0e450f0e">[email&#160;protected]</a></strong></p>
       </div>
       <div>
         <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--green);margin-bottom:20px;">Wofür Ihre Spende eingesetzt wird</h3>
         <div class="use-cases">
-          <div class="use-case"><span class="icon">📚</span><div><strong>Deutschkurse</strong><p>Materialien und Aufwandsentschädigungen für ehrenamtliche Lehrkräfte.</p></div></div>
-          <div class="use-case"><span class="icon">🚲</span><div><strong>Fahrradwerkstatt</strong><p>Ersatzteile und Werkzeug für die gemeinsame Fahrradreparatur.</p></div></div>
-          <div class="use-case"><span class="icon">☕</span><div><strong>RuKi & Café mit Herz</strong><p>Betrieb der offenen Anlaufstellen in Ahrensburg und Siek.</p></div></div>
-          <div class="use-case"><span class="icon">🌍</span><div><strong>Mi4y – Migranten helfen Migranten</strong><p>Monatliche Treffen und Aktivitäten der Selbsthilfegruppe.</p></div></div>
+          <div class="use-case"><span class="icon">📚</span><div><strong>Deutschtraining</strong><p>In unseren Sprach-Gruppen können zielgerichtet Deutschkenntnisse in angenehmer Lernatmosphäre verbessert werden.</p></div></div>
+          <div class="use-case"><span class="icon">💼</span><div><strong>Jobvermittlung</strong><p>Unterstützung bei der Jobsuche, Anerkennung ausländischer Berufsabschlüsse und Bewerbungstraining.</p></div></div>
+          <div class="use-case"><span class="icon">🚲</span><div><strong>Fahrradwerkstatt</strong><p>Geflüchtete und Deutsche reparieren gemeinsam gespendete Räder und geben diese an andere Geflüchtete weiter.</p></div></div>
+          <div class="use-case"><span class="icon">☕</span><div><strong>RuKi & Café mit Herz</strong><p>Offene Begegnungsorte in Ahrensburg und Siek. Beratung, Austausch und einfach Ankommen.</p></div></div>
         </div>
       </div>
     </div>
@@ -91,7 +91,7 @@
     <span style="color:var(--green-light)">Made with ❤ for our community</span>
   </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const toggle = document.getElementById('navToggle');
 const links  = document.querySelector('.nav-links');
 toggle.addEventListener('click', () => {
@@ -99,14 +99,4 @@ toggle.addEventListener('click', () => {
   links.classList.toggle('open');
 });
 document.querySelectorAll('.nav-links > li > a').forEach(a => {
-  a.addEventListener('click', function(e) {
-    const li = this.parentElement;
-    if (li.querySelector('.dropdown') && window.innerWidth <= 900) {
-      e.preventDefault();
-      li.classList.toggle('open');
-    }
-  });
-});
-</script>
-</body>
-</html>
+  a.addEvent
