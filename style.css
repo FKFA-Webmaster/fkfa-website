@@ -299,3 +299,77 @@ footer ul a:hover { color:var(--green-light); }
 .hero h1 span {
   color: #0b3d6d;
 }
+
+/* ===== Büro-Abschnitt ===== */
+.buero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.buero-team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 520px;
+}
+
+.buero-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.buero-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--green-pale);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.buero-info-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.buero-info-card h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin: 0 0 4px 0;
+}
+
+.buero-info-card p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.buero-info-card a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.buero-info-card a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .buero-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .buero-team {
+    flex-shrink: 0;
+  }
+  .buero-info {
+    flex: 1;
+    grid-template-columns: 1fr 1fr;
+  }
+}
