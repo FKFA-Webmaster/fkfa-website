@@ -180,4 +180,35 @@
     </div>
     <div>
       <h4>Rechtliches</h4>
-      <u
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+      <div style="margin-top:16px;font-size:12px;">VR 4040 HL · Amtsgericht Lübeck</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Freundeskreis für Flüchtlinge Ahrensburg e.V.</span>
+    <span style="color:var(--green-light)">Made with ❤ for our community</span>
+  </div>
+</footer>
+</footer>
+<script>
+const toggle = document.getElementById('navToggle');
+const links  = document.querySelector('.nav-links');
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('open');
+  links.classList.toggle('open');
+});
+document.querySelectorAll('.nav-links > li > a').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const li = this.parentElement;
+    if (li.querySelector('.dropdown') && window.innerWidth <= 900) {
+      e.preventDefault();
+      li.classList.toggle('open');
+    }
+  });
+});
+</script>
+</body>
+</html>
