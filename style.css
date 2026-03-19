@@ -373,3 +373,19 @@ footer ul a:hover { color:var(--green-light); }
     grid-template-columns: 1fr 1fr;
   }
 }
+
+
+.wegbeschreibung img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 16px auto;
+  border-radius: 10px;
+}
+
+.wegbeschreibung p {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
