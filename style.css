@@ -375,17 +375,19 @@ footer ul a:hover { color:var(--green-light); }
 }
 
 
-.wegbeschreibung img {
+/* Wegbeschreibung Bilder optimieren */
+.weg-foto-item img {
   width: 100%;
-  max-width: 420px;
+  max-width: 320px;
   height: auto;
   display: block;
-  margin: 16px auto;
+  margin: 0 auto 12px auto;
   border-radius: 10px;
 }
 
-.wegbeschreibung p {
+.weg-foto-item p {
   text-align: center;
   font-size: 0.95rem;
-  margin-bottom: 20px;
+  margin: 0 auto;
+  max-width: 320px;
 }
