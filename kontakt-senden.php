@@ -1,7 +1,7 @@
 <?php
 // FKFA Kontaktformular - PHP Mailer
 // Empfänger-E-Mail hier eintragen:
-$empfaenger = "kontakt@freundeskreis-fluechtlinge.de";
+$empfaenger = "kontakt@fkfa.de";
 
 // Nur POST-Anfragen verarbeiten
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
